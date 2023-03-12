@@ -1,5 +1,6 @@
-package com.e444er.shop.fragments
+package com.e444er.shop.fragments.register
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.e444er.shop.R
+import com.e444er.shop.activities.MainActivity
 import com.e444er.shop.data.User
 import com.e444er.shop.databinding.FragmentRegisterBinding
 import com.e444er.shop.util.RegisterValidation
@@ -54,7 +56,6 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
                 val password = edPassword.text.toString().trim()
                 viewModel.registerNewUser(user, password)
             }
-
         }
 
         viewLifecycleOwner.lifecycleScope.launch {
@@ -65,7 +66,10 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
 
                         }
                         is Resource.Success -> {
-
+                            Intent(requireActivity(), MainActivity::class.java).also { intent->
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+                                startActivity(intent)
+                            }
                         }
                         is Resource.Error -> {
                             Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()

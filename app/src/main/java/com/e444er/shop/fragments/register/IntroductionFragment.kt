@@ -1,4 +1,4 @@
-package com.e444er.shop.fragments
+package com.e444er.shop.fragments.register
 
 import android.os.Bundle
 import android.view.LayoutInflater

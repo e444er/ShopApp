@@ -7,6 +7,13 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
+    <string name="g_reset_password">Reset Password</string>
+    <string name="g_reset_password_message">We will send you password reset link on your Email</string>
+    <string name="g_send">Send</string>
+
+    <string name="g_cancel">Cancel</string>
+    <string name="g_password_reset">We sent reset password link to your email</string>
+
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="g_the_right_address">The Right Address \n For Shopping \n Anyday</string>
@@ -33,4 +40,12 @@
     <string name="password_at_least_six">password should have 6</string>
     <string name="valid_email">check your email</string>
     <string name="shop">Shop</string>
+    <string name="forget_password">Forget password</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="cart">Cart</string>
+    <string name="profile">Profile</string>
+    <string name="search_now">Search now</string>
 </resources>
